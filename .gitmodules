@@ -1,0 +1,3 @@
+[submodule "ref/rattlegram"]
+	path = ref/rattlegram
+	url = https://github.com/wave-owl/rattlegram.git

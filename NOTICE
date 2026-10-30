@@ -1,0 +1,23 @@
+ribbit-core is a C99 port of the Rattlegram modem:
+
+  Rattlegram, https://github.com/aicodix/rattlegram
+  mirrored as https://github.com/wave-owl/rattlegram
+  tag v1.19, commit 4df0f3af3c6da63f0d70512392e80c7a31b72099
+  app/src/main/cpp/*.hh (the aicodix DSP and code library headers bundled with the app)
+
+Its licence (LICENSE of the upstream repository):
+
+  Copyright (C) 2022 by Ahmet Inan <inan@aicodix.de>
+
+  Permission to use, copy, modify, and/or distribute this software for any purpose with or
+  without fee is hereby granted.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO
+  THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
+  SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+  ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+  CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
+  OR PERFORMANCE OF THIS SOFTWARE.
+
+src/ribbit_tables.c holds the frozen bit tables (polar_tables.hh) and the base-37 raster
+font (base37_bitmap.hh) of the reference verbatim.
