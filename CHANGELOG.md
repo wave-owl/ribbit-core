@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- CI (GitHub Actions, Linux + macOS): `make`, `make test`, `make sanitize` (ASan/UBSan) and
+  the differential check `make ref` against the C++ reference.
+
 ## 0.1.0
 
 - Receiver and transmitter ported from Rattlegram v1.19 (`decoder.hh`, `encoder.hh`), contract

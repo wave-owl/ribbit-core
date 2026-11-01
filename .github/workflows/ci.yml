@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: make
+      - name: Test (API, goldens from the C++ reference, round trips)
+        run: make test
+      - name: Test (ASan + UBSan)
+        run: make sanitize
+
+  reference:
+    # Differential check against the unmodified Rattlegram C++ modem (ref/rattlegram): every
+    # TX vector byte-identical, every decoder event list identical.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numpy
+        run: python3 -m pip install numpy
+      - name: Compare with the C++ reference
+        run: make ref
