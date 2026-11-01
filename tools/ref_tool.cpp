@@ -10,6 +10,8 @@
  *
  * Copyright (c) 2026 Gerolf Ziegenhain. 0BSD, see include/ribbit.h.
  */
+/* The reference headers use uint8_t without <cstdint>; libstdc++ does not pull it in. */
+#include <cstdint>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
