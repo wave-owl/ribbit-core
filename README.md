@@ -61,6 +61,11 @@ Measured on Apple silicon (arm64, clang 17): -O2 and -O3 builds give identical r
    outside 0-9, A-Z, a-z and space.
 7. `cmplx(nrz(noise_seq()), nrz(noise_seq()))` evaluates the real part first, as clang (and
    the Android NDK) does; a gcc-built reference may differ in the noise symbols.
+8. The reference built against libstdc++ (Linux, or gcc on macOS) reports the Schmidl-Cox
+   CFO one ulp off in 2 of the 110 vectors (`44100_offset+12.5`, `48000_offset-50`; payloads,
+   flips and sample indices identical). The authority is the reference built with Apple
+   clang and libc++, which wrote the goldens; CI runs `make ref` there and `make test
+   sanitize` (goldens) on Linux and macOS.
 
 A complete transmission only decodes once the receiver has seen roughly two symbols past its
 end (the reference processes symbols from a 4-symbol buffer); a file decode should append

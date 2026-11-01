@@ -22,12 +22,10 @@ jobs:
 
   reference:
     # Differential check against the unmodified Rattlegram C++ modem (ref/rattlegram): every
-    # TX vector byte-identical, every decoder event list identical.
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    # TX vector byte-identical, every decoder event list identical. Run with Apple clang and
+    # libc++, the build that wrote the goldens; a libstdc++ build of the reference reports the
+    # CFO one ulp off in 2 of 110 vectors (README, deviation 8).
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,5 +35,5 @@ jobs:
           python-version: "3.12"
       - name: Install numpy
         run: python3 -m pip install numpy
-      - name: Compare with the C++ reference (clang, like the goldens)
-        run: make CC=clang CXX=clang++ ref
+      - name: Compare with the C++ reference
+        run: make ref
