@@ -37,5 +37,5 @@ jobs:
           python-version: "3.12"
       - name: Install numpy
         run: python3 -m pip install numpy
-      - name: Compare with the C++ reference
-        run: make ref
+      - name: Compare with the C++ reference (clang, like the goldens)
+        run: make CC=clang CXX=clang++ ref
