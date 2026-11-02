@@ -1,0 +1,195 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "git:https://github.com/wave-owl/rattlegram@4df0f3af3c6da63f0d70512392e80c7a31b72099",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/rattlegram/tree/4df0f3af3c6da63f0d70512392e80c7a31b72099"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/rattlegram",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "reference-only"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "4df0f3af3c6da63f0d70512392e80c7a31b72099"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "adde3351e1e19dd84d35042a72b35bdc112cbe7e"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/rattlegram"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"7c3c1e4d95d4c718f6e126c739c767c87866188131333f49500e48ae1abb6ab3\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        }
+      ],
+      "scope": "excluded",
+      "type": "library",
+      "version": "4df0f3af3c6da63f0d70512392e80c7a31b72099"
+    },
+    {
+      "bom-ref": "vendored:src",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/rattlegram/tree/4df0f3af3c6da63f0d70512392e80c7a31b72099"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"NOTICE\", \"sha256\": \"4917b691c8264e48ffa46236956ee4e87b87f5441c3ed91ace88831fb363d566\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"NOTICE\", \"sha256\": \"4917b691c8264e48ffa46236956ee4e87b87f5441c3ed91ace88831fb363d566\"}, {\"path\": \"README.md\", \"sha256\": \"32d9ebff1659cb798766fdc3d22e927bc2628780baebcb36d0ee74d3367037f1\"}, {\"path\": \"src/ribbit_code.c\", \"sha256\": \"15bfc6a884d27bcb25288c6bba4c6165a5f64adf6d35fab437021322c3424e5b\"}, {\"path\": \"src/ribbit_core.c\", \"sha256\": \"5c1bf1b64d2fdd497c309dd24a18ae24bdf60b69468de082cd47ef838a7c7e3d\"}, {\"path\": \"src/ribbit_fft.c\", \"sha256\": \"164d65891b5c7132b701aa8b56613128313dc2ab3612c4ce56587cc7904829d0\"}, {\"path\": \"src/ribbit_internal.h\", \"sha256\": \"37b8c95806a89c21a00d816212256fa28b1927a35335e02f6496c7ef85103b58\"}, {\"path\": \"src/ribbit_rx.c\", \"sha256\": \"12259d7b4b272731f8bc5a61df9c41057bb1d03c8ffb7258f43fc5a063086ccf\"}, {\"path\": \"src/ribbit_tables.c\", \"sha256\": \"554c872339ff5f3c28c88ca0a51e76d64ab243196bb714e6f1a1c1fdc86acad6\"}, {\"path\": \"src/ribbit_tx.c\", \"sha256\": \"46827a28a7c24934e510e74458b673b59b40a47fad04bb5e0719697b6243ebee\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "4df0f3af3c6da63f0d70512392e80c7a31b72099"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "unknown",
+      "assemblies": [
+        "git:https://github.com/wave-owl/ribbit-core@1490b479f05d6f72b740da82f947353192261740"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "git:https://github.com/wave-owl/rattlegram@4df0f3af3c6da63f0d70512392e80c7a31b72099"
+    },
+    {
+      "dependsOn": [
+        "vendored:src"
+      ],
+      "ref": "git:https://github.com/wave-owl/ribbit-core@1490b479f05d6f72b740da82f947353192261740"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "git:https://github.com/wave-owl/ribbit-core@1490b479f05d6f72b740da82f947353192261740",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/ribbit-core/tree/1490b479f05d6f72b740da82f947353192261740"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/ribbit-core",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "source-root"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "1490b479f05d6f72b740da82f947353192261740"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "43d7ebadbec603b68509be901d42a2789856aac3"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/ribbit-core"
+        },
+        {
+          "name": "sbom:release-tags",
+          "value": "[\"v0.1.0\"]"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"7ce48f319a0642e30f2f6eca7c9987e5ecb2114bdd49298fa531fc81c9d8b3f8\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        }
+      ],
+      "type": "application",
+      "version": "1490b479f05d6f72b740da82f947353192261740"
+    },
+    "properties": [
+      {
+        "name": "sbom:scope",
+        "value": "Source repository inventory only; completeness is UNKNOWN. Syft inventories tracked source/package manifests. Gitlinks and declared vendored/model evidence are inspected at immutable pins. CMake declarations are conditional requirements, not resolved installations. This is NOT proof of operating-system packages, static-link closure, build-time resolution, or the contents of release binaries."
+      },
+      {
+        "name": "sbom:generation-status",
+        "value": "success"
+      },
+      {
+        "name": "sbom:generation-errors",
+        "value": "[]"
+      }
+    ],
+    "timestamp": "2026-11-02T16:53:47.869476+00:00",
+    "tools": {
+      "components": [
+        {
+          "author": "anchore",
+          "name": "syft",
+          "type": "application",
+          "version": "1.55.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:8a1c4eda-00d7-4880-ab1f-04b4c9167a6b",
+  "specVersion": "1.6",
+  "version": 1
+}

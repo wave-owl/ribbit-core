@@ -1,0 +1,28 @@
+{
+  "gitlinks": {
+    "ref/rattlegram": {
+      "repository": "wave-owl/rattlegram",
+      "licenses": [
+        "LICENSE"
+      ],
+      "role": "reference-only"
+    }
+  },
+  "vendored": [
+    {
+      "path": "src",
+      "repository": "wave-owl/rattlegram",
+      "commit": "4df0f3af3c6da63f0d70512392e80c7a31b72099",
+      "licenses": [
+        "NOTICE"
+      ],
+      "evidence": [
+        "README.md",
+        "NOTICE"
+      ]
+    }
+  ],
+  "references": [],
+  "models": [],
+  "external_libraries": []
+}

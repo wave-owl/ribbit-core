@@ -89,3 +89,12 @@ make ref             # differential check against the C++ reference (needs ref/r
 ## Licence
 
 0BSD, like the reference. See LICENSE and NOTICE.
+
+<!-- wave-owl-source-sbom-docs:start -->
+## Source SBOMs
+
+Every published release, including prereleases, receives automatically generated
+CycloneDX JSON and readable documentation. See the [initial source report](SBOM.md),
+[CycloneDX JSON](SBOM.cdx.json) and [release policy](SBOM-POLICY.md) for scope,
+release assets, provenance declarations and reproduction instructions.
+<!-- wave-owl-source-sbom-docs:end -->
